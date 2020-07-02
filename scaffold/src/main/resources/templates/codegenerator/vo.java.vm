@@ -1,0 +1,34 @@
+package ${package.Vo};
+
+import java.util.Date;
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+/**
+ * $!{table.comment}
+ *
+ * @author ${author}
+ * @date ${date}
+ */
+
+@Data
+@Accessors(chain = true)
+public class ${entity}VO implements Serializable {
+
+## ----------  BEGIN 字段循环遍历  ----------
+#foreach($field in ${table.fields})
+#if("$!field.propertyName" !="mark" and "$!field.propertyName" !="cTime" and "$!field.propertyName" !="uTime")
+#if("$!field.comment" != "")
+    /**
+     * ${field.comment}
+     */
+#end
+    private ${field.propertyType} ${field.propertyName};
+
+#end
+#end
+## ----------  END 字段循环遍历  ----------
+}
