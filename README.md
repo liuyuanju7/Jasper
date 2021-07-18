@@ -5,7 +5,7 @@
 
 ### 模块
 
-#### [Git](/Users/liuyuanju1/Jasper/Git)
+#### [Git](./Git)
 
-[JVM](/Users/liuyuanju1/Jasper/JVM)
+[JVM](./JVM)
 
