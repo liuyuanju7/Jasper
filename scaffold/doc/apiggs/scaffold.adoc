@@ -1,0 +1,111 @@
+= scaffold-api
+:doctype: book
+:toc: left
+:toclevels: 3
+:toc-title: 目录
+:source-highlighter: highlightjs
+
+[%hardbreaks]
+version:1.0
+
+[%hardbreaks]
+scaffold-api脚手架项目接口文档
+
+
+== 用户 模块相关接口-
+
+=== 查询全量用户列表
+请求
+[source,HTTP ]
+----
+GET /user/list HTTP/1.1
+
+----
+
+响应
+[source,HTTP ]
+----
+HTTP/1.1 200 OK
+
+{
+  "code" : "200",
+  "message" : "",
+  "data" : [ {
+    "id" : 0,
+    "name" : "",
+    "gender" : "",
+    "age" : 0,
+    "email" : "",
+    "cTime" : "",
+    "uTime" : ""
+  } ]
+}
+----
+
+[options="header"]
+|===
+|+名称+|+类型+|+校验+|+默认+|+描述+
+|+code+|+int+||+200+|
+|+message+|+String+|||
+|+data+|+List+|||
+|+data.[].id+|+Long+||+0+|+主键ID+
+|+data.[].name+|+String+|||+姓名+
+|+data.[].gender+|+GenderEnum+|||+性别+
+|+data.[].age+|+Integer+||+0+|+年龄+
+|+data.[].email+|+String+|||+邮箱+
+|+data.[].cTime+|+Date+|||+创建时间+
+|+data.[].uTime+|+Date+|||+修改时间+
+|+data.[].mark+|+Boolean+|||+数据有效标示位 0有效 1无效+
+|===
+
+
+=== 根据Id查询用户
+请求
+[source,HTTP ]
+----
+GET /user/{id}? HTTP/1.1
+
+----
+
+[options="header"]
+|===
+|+名称+|+类型+|+校验+|+默认+|+描述+
+|+id+|+Long+|||
+|===
+
+响应
+[source,HTTP ]
+----
+HTTP/1.1 200 OK
+
+{
+  "code" : "200",
+  "message" : "",
+  "data" : {
+    "id" : 0,
+    "name" : "",
+    "gender" : "",
+    "age" : 0,
+    "email" : "",
+    "cTime" : "",
+    "uTime" : ""
+  }
+}
+----
+
+[options="header"]
+|===
+|+名称+|+类型+|+校验+|+默认+|+描述+
+|+code+|+int+||+200+|
+|+message+|+String+|||
+|+data+|+User+|||
+|+data.id+|+Long+||+0+|+主键ID+
+|+data.name+|+String+|||+姓名+
+|+data.gender+|+GenderEnum+|||+性别+
+|+data.age+|+Integer+||+0+|+年龄+
+|+data.email+|+String+|||+邮箱+
+|+data.cTime+|+Date+|||+创建时间+
+|+data.uTime+|+Date+|||+修改时间+
+|+data.mark+|+Boolean+|||+数据有效标示位 0有效 1无效+
+|===
+

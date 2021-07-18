@@ -1,0 +1,102 @@
+{
+  "info" : {
+    "name" : "scaffold-api",
+    "_postman_id" : "scaffold",
+    "description" : "scaffold-api脚手架项目接口文档",
+    "schema" : "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item" : [ {
+    "name" : "用户 模块相关接口-",
+    "item" : [ {
+      "id" : "00ea5e5a-6def-4ed3-911d-6bbc8c15a096",
+      "name" : "查询全量用户列表",
+      "request" : {
+        "url" : {
+          "protocol" : "http",
+          "host" : "{{host}}",
+          "path" : "/user/list",
+          "query" : [ ]
+        },
+        "method" : "GET",
+        "header" : [ ],
+        "body" : {
+          "urlencoded" : [ ],
+          "formdata" : [ ]
+        }
+      },
+      "response" : [ {
+        "name" : "200 OK",
+        "originalRequest" : {
+          "url" : {
+            "protocol" : "http",
+            "host" : "{{host}}",
+            "path" : "/user/list",
+            "query" : [ ]
+          },
+          "method" : "GET",
+          "header" : [ ],
+          "body" : {
+            "urlencoded" : [ ],
+            "formdata" : [ ]
+          }
+        },
+        "header" : [ ],
+        "body" : "{\n  \"code\" : \"200\",\n  \"message\" : \"\",\n  \"data\" : [ {\n    \"id\" : 0,\n    \"name\" : \"\",\n    \"gender\" : \"\",\n    \"age\" : 0,\n    \"email\" : \"\",\n    \"cTime\" : \"\",\n    \"uTime\" : \"\"\n  } ]\n}",
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json"
+      } ]
+    }, {
+      "id" : "226212a4-7b7e-4caf-9207-fa993606f0a8",
+      "name" : "根据Id查询用户",
+      "request" : {
+        "url" : {
+          "protocol" : "http",
+          "host" : "{{host}}",
+          "path" : "/user/{id}",
+          "query" : [ {
+            "key" : "id",
+            "type" : "Long",
+            "value" : "",
+            "description" : "",
+            "disabled" : false
+          } ]
+        },
+        "method" : "GET",
+        "header" : [ ],
+        "body" : {
+          "urlencoded" : [ ],
+          "formdata" : [ ]
+        }
+      },
+      "response" : [ {
+        "name" : "200 OK",
+        "originalRequest" : {
+          "url" : {
+            "protocol" : "http",
+            "host" : "{{host}}",
+            "path" : "/user/{id}",
+            "query" : [ {
+              "key" : "id",
+              "type" : "Long",
+              "value" : "",
+              "description" : "",
+              "disabled" : false
+            } ]
+          },
+          "method" : "GET",
+          "header" : [ ],
+          "body" : {
+            "urlencoded" : [ ],
+            "formdata" : [ ]
+          }
+        },
+        "header" : [ ],
+        "body" : "{\n  \"code\" : \"200\",\n  \"message\" : \"\",\n  \"data\" : {\n    \"id\" : 0,\n    \"name\" : \"\",\n    \"gender\" : \"\",\n    \"age\" : 0,\n    \"email\" : \"\",\n    \"cTime\" : \"\",\n    \"uTime\" : \"\"\n  }\n}",
+        "status" : "OK",
+        "code" : 200,
+        "_postman_previewlanguage" : "json"
+      } ]
+    } ]
+  } ]
+}

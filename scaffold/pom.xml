@@ -18,6 +18,7 @@
 		<java.version>1.8</java.version>
 		<mybatis-plus.version>3.1.0</mybatis-plus.version>
 		<mysql-druid.version>1.1.9</mysql-druid.version>
+		<fastjson.version>1.2.70</fastjson.version>
 	</properties>
 
 	<profiles>
@@ -77,10 +78,6 @@
 			<version>${mybatis-plus.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.baomidou</groupId>
-			<artifactId>dynamic-datasource-spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-engine-core</artifactId>
 			<version>2.2</version>
@@ -94,6 +91,17 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid-spring-boot-starter</artifactId>
 			<version>${mysql-druid.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.3.2</version>
 		</dependency>
 	</dependencies>
 
@@ -110,6 +118,34 @@
 				<configuration>
 					<!-- 略过整个单元测试的执行，不推荐 -->
 					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.github.apiggs</groupId>
+				<artifactId>apiggs-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<phase>compile</phase>
+						<goals>
+							<goal>apiggs</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!--生成文件名称 xxx.html-->
+					<id>scaffold</id>
+					<title>scaffold-api</title>
+					<description>scaffold-api脚手架项目接口文档</description>
+					<!-- 生成文件 输出目录 -->
+					<out>doc</out>
+					<version>1.0</version>
+					<!--production 输出文件夹，默认为 apiggs-->
+					<!--out 输出目录，默认为 target-->
+					<!--source 源码目录-->
+					<!--dependency 源码依赖的代码目录，以逗号隔开-->
+					<!--jar 源码依赖的jar包目录，以逗号隔开-->
+					<!--ignore 忽略某些类型-->
 				</configuration>
 			</plugin>
 		</plugins>
