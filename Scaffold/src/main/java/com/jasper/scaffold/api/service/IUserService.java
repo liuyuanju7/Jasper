@@ -1,7 +1,7 @@
 package com.jasper.scaffold.api.service;
 
-import com.jasper.scaffold.api.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.jasper.scaffold.api.entity.User;
 
 /**
  * <p>

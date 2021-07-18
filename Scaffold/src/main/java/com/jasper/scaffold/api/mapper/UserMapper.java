@@ -1,7 +1,7 @@
 package com.jasper.scaffold.api.mapper;
 
-import com.jasper.scaffold.api.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jasper.scaffold.api.entity.User;
 
 /**
  * <p>

@@ -1,9 +1,9 @@
 package com.jasper.scaffold.api.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.jasper.scaffold.api.entity.User;
 import com.jasper.scaffold.api.mapper.UserMapper;
 import com.jasper.scaffold.api.service.IUserService;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
